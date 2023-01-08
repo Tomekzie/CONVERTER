@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Converter meters</title>
+
+</head>
+<body>
+    <button class="shifter" aria-label="Przełącznik trybu nocnego">
+        <!-- <span>Dark mode</span> -->
+        <div class="icon"></div>
+    </button>
+    <div class="input-conteiner">
+        <label for="number"><h1>Metric/imperial unit conversion</h1></label>
+        <input type="text" id="input-number" required placeholder="20">
+        <button type="button" name="number" id="convert-btn">Convert</button>
+       
+    </div>
+    <div class="output-container">
+        <div class="output">
+            <h2>Length (Metere/feet)</h2>
+            <!-- <p id="mtf"></p><p id="ftm"></p> -->
+            <p id="length">0 meters = 0 feet | 0 feet = 0 meters</p>
+        </div>
+        <div class="output">
+            <h2>Volume (liters/gallons)</h2>
+            <!-- <p id="ltg"></p><p id="gtl"></p> -->
+            <p id="volume">0 liters = 0 gallons | 0 gallons = 0 liters</p>
+        </div>
+        <div class="output">
+            <h2>Mass (kilograms/pounds)</h2>
+            <!-- <p id="ktp"></p><p id="ptk"></p> -->
+            <p id="mass">0 kilograms = 0 pounds | 0 pounds = 0 kilograms</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

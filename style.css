@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --color-bg: #F4F4F4;
+  --color-bg2: #FFFFFF;
+  --color-bg3: #606c9b;
+  --color-text: #5A537B;
+
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-bg3);
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-conteiner {
+  min-width: 500px;
+  height: 40vh;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #6943FF;
+  border-radius: 2px 2px 0 0;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    width: 100px;
+    height: 80px;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-size: 1rem;
+}
+
+/* // shift theme // */
+
+.shifter {
+  background-color: #1F2937;
+  border: solid 4px #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 40px;
+  outline-width: 5px;
+  position: relative;
+  width: 100px;
+  left: 200px;
+  top: 150px;
+}
+.icon {
+  background-color: rgba(113, 111, 107, 0.871);
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 25px;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 25px;
+  
+}
+
+span {
+  bottom: 100%;
+  color: var(--color-main);
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  left: 50%;
+  padding: 12px 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+
+}
+
+
+.output-container {
+  max-width: 600px;
+  min-width: 500px;
+  height: 60vh;
+  /* border: 1px solid black; */
+  border-radius: 0 0 2px 2px;
+  margin-bottom: 1rem;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.output {
+  background-color: var(--color-bg2);
+  margin-inline: 1rem;
+  border-radius: 2px;
+  min-height: 7rem;
+  
+}
+
+h2 {
+  color: var(--color-bg3);
+  font-size: 1.2rem;
+}
+
+p {
+  color: var(--color-text);
+  display: inline;
+}
+/* light mode */
+body.light {
+  background-color: #606c9b;
+}
+
+body.light .output-container {
+  background-color: #F4F4F4;
+}
+
+body.light .output {
+background-color: #FFFFFF;
+}
+
+body.light h2 {
+ color: var(--color-bg);
+}
+
+body.light p {
+ color: #273549;
+}
+
+body.light .icon {
+  background-color: rgba(113, 111, 107, 0.871);
+  transform: translateX(0);
+}
+
+body.light .icon::after {
+  content: none ;
+}
+/* dark mode  */
+
+body.dark {
+  --color-bg3: rgb(25, 22, 22);
+}
+
+body.dark .output-container {
+  --color-bg: #1F2937;
+}
+
+body.dark .output {
+--color-bg2: #273549;
+}
+
+body.dark h2 {
+  --color-bg3: #CCC1FF;
+}
+
+body.dark p {
+  --color-text: #FFFFFF;
+}
+
+body.dark .icon {
+  background-color: yellow;
+  transform: translateX(55px);
+}
+
+body.dark .icon::after {
+  background-color: #1F2937;
+  border-radius: 100%;
+  display: block;
+  height: 23px;
+  width: 23px;
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --color-bg3: rgb(25, 22, 22);
+  }
+  
+  body .output-container {
+    --color-bg: #1F2937;
+  }
+  
+  body .output {
+  --color-bg2: #273549;
+  }
+  
+  body h2 {
+    --color-bg3: #CCC1FF;
+  }
+  
+  body p {
+    --color-text: #FFFFFF;
+  }
+  
+  body .icon {
+    background-color: yellow;
+    transform: translateX(55px);
+  }
+  
+  body .icon::after {
+    background-color: #1F2937;
+    border-radius: 100%;
+    display: block;
+    height: 23px;
+    width: 23px;
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 8px;
+  }
+};
